@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RodrigoCP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/RODRIGOCPof/imagenes-CP/a07b17cabb05c9c3b27f239146a77d198a493ad2/logoCPpokemon.svg" alt="Logo Grafiluz" class="logo">
+    <p>Zona B Manzana T Lote 8 Al frente de Komatsu | 📧  rodrigomaini8.com | 📞 948518211 / 920715085</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#antiestres">TCG</a>
+    <a href="#escritorio">TOOLS</a>
+    <a href="#tomatodos">FIGURAS</a>
+    <a href="#llaveros">PELUCHES</a>
+    <a href="#bolsas">GAMING</a>
+  </nav>
+
+  <!-- BOTÓN FLOTANTE PARA IR AL INICIO -->
+  <button class="btn-inicio-flotante" id="btnInicio" onclick="irAlInicio()">
+    <!-- La flecha se genera con CSS ::before -->
+  </button>
+
+  <section id="inicio">
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3287/PMP20000014761/thumbnail-1.jpeg" alt="Productos Publicitarios">
+          <div class="carousel-overlay">
+            <h2>Bienvenidos a CP CARDS Y POKEMON</h2>
+            <p>
+              Somos una empresa especializada en <strong>cartas de tcg pokemon a nivel Peru</strong>. 
+              Ofrecemos una amplia gama de productos promocionales de alta calidad para asi puedas conseguir la mejor experiencia en cartas tcg.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WT-nRn1wtwPaKgPc08HgYsDmTHufrq3xErBrE3NhJgQVRZgNzhCkZWA&s=10" alt="Artículos Personalizados">
+          <div class="carousel-overlay">
+            <h2>Calidad en peluches</h2>
+            <p>
+              La mejor calidad del PEru en peluches de pokemon, con licencias actualizadas y mercaderia 100% original.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img loading="lazy" src="https://external-preview.redd.it/anyone-remember-these-tomy-pokemon-figures-v0-UaNJ9mLH0e0yP5Zc9MYFWdKH7-HJSGYprrzpV6Vi5KA.jpeg?width=1080&crop=smart&auto=webp&s=10cd91648ffd75a852c7dbc1c5848eb7aaba61e6" alt="Promocionales">
+          <div class="carousel-overlay">
+            <h2>Figuras de coleccion</h2>
+            <p>
+              Contamos con los mejores detalles y calidad en figuras coleccionables y de ediones nuevas y limitadas.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ0EZX2xXeOOaQLgk7UpeEEmfBWHeI-jy2hKwErJUR6Ef1x4kqKQ8imrlD&s=10" alt="Promocionales">
+          <div class="carousel-overlay">
+            <h2>Juegos de alta calidad</h2>
+            <p>
+              Juegos pokemon desde las primeras generaciones hasta las actuales, todo material y originales con licencia.            </p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="carousel-controls">
+        <button class="carousel-btn" onclick="previousSlide()">‹</button>
+        <button class="carousel-btn" onclick="nextSlide()">›</button>
+      </div>
+      
+      <div class="carousel-indicators">
+        <span class="indicator active" onclick="goToSlide(0)"></span>
+        <span class="indicator" onclick="goToSlide(1)"></span>
+        <span class="indicator" onclick="goToSlide(2)"></span>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="productos">
+    <section id="antiestres">
+      <h2>TCG</h2>
+      <div class="grid">
+        <!-- Card 1  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-MEGA-Special-Card-Set-Mega-Gallade-ex-Japanese-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG MEGA Special Card Set Mega</h3>
+              <p>TCG</p>
+              <p>S/.199</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Muñeco Antiestrés - Medidas: 10.5 x 7 cm')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-Charizard-Ex-Super-Premium-Collection-Espanol-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>              
+            </div>
+            <div class="card-carousel-dots">
+              <span class="card-carousel-dot active"></span>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG Charizard Ex Super Premium                      </h3>
+              <p>TCG</p>
+              <p>S/.350</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Gota antiestres - Medidas: 5.9 cm')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Card 3  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-Greninja-EX-Kingdra-EX-Special-Collection-Box-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>              
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG Greninja EX Kingdra EX Special</h3>
+              <p>TCG</p>
+              <p>S/.359</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Corazon Amtiestres')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-Lugia-EX-Special-Collection-Espanol-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG Lugia EX Special Collection Español</h3>
+              <p>TCG</p>
+              <p>S/.159</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Muñeco Antiestrés - Modelo Clásico')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-Mega-Greninja-EX-Premium-Collection-Ingles-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>           
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG Mega Greninja EX Premium  </h3>
+              <p>TCG</p>
+              <p>S/.229*</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pelota fútbol antiestrés - Medidas: 7 x 7 cm')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-League-Battle-Mewtwo-EX-Ingles-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG League Battle Mewtwo</h3>
+              <p>TCG</p>
+              <p>S/.119</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pelota antiestrés')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-World-Championship-2025-Pult-Bomb-Ingles-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG World Championship 2025 Pult</h3>
+              <p>TCG</p>
+              <p>S/.99</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Muñeco Antiestrés - Modelo Clásico')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 8  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-TCG-World-Championship-2025-JP-Raging-Bolt-Ingles-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon TCG World Championship 2025 JP </h3>
+              <p>TCG</p>
+              <p>S/.99</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Muñeco Antiestrés - Modelo Clásico')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="escritorio">
+      <h2>TOOLS</h2>
+      <div class="grid">
+        <!-- Card 1  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pkmn-Folder-4-Pocket-400-Cartas-Rayo-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pkmn Folder 4 Pocket 400 Cartas Rayo</h3>
+              <p>TOOLS</p>
+              <p>S/.99</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pkmn Folder 4 Pocket 400 Cartas Rayo')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/06/Pokemon-Folder-9-Pocket-Kanto-Black-900-Cartas-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>              
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Folder 9 Pocket Kanto Black 900 Cartas</h3>
+              <p>TOOLS</p>
+              <p>S/.199</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pkmn Folder 9 Pocket Kanto Black 900 Cartas')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2025/10/Folder-4-Pocket-Para-400-Cartas-Charizard-X-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Folder 4 Pocket Para 400 Cartas Charizard X</h3>
+              <p>TOOLS</p>
+              <p>S/.109</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Folder 4 Pocket Para 400 Cartas Charizard X')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2025/10/Pokemon-Folder-9-Pocket-900-Cartas-Mew-Love-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+              
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Folder 9 Pocket 900 Cartas Mew Love</h3>
+              <p>TOOLS</p>
+              <p>S/.149</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Folder 9 Pocket 900 Cartas Mew Love')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tomatodos">
+      <h2>FIGURAS</h2>
+      <div class="grid">
+        <!-- Card 1  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/08/Pokemon-Takara-Tomy-30th-Anniversario-Pikachu-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>             
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Takara Tomy 30th Anniversario Pikachu</h3>
+              <p>FIGURA</p>
+              <p>S/.29</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Takara Tomy 30th Anniversario Pikachu')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/08/Takara-Tomy-Pokemon-30th-Anniversary-Moncolle-Sinnoh-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Takara Tomy Pokemon 30th Anniversary Sinnoh</h3>
+              <p>FIGURA</p>
+              <p>S/.69</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Takara Tomy Pokemon 30th Anniversary Moncolle Sinnoh')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/08/Takara-Tomy-Pokemon-30th-Anniversary-Moncolle-Hoenn-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>             
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Takara Tomy Pokemon 30th Anniversary Hoenn</h3>
+              <p>FIGURA</p>
+              <p>S/.79.00</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Takara Tomy Pokemon 30th Anniversary Moncolle Hoenn')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-Takara-Tomy-MS-26-Gengar-Japon-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>              
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Takara Tomy MS 26 Gengar Japon</h3>
+              <p>FIGURA</p>
+              <p>S/.29.00</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Takara Tomy MS 26 Gengar Japon')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </section>
+
+    <section id="llaveros">
+      <h2>PELUCHES</h2>      
+      <div class="grid">
+        <!-- Card 1  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-Center-Peluche-Fit-Gengar-Japon-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+              
+            </div>
+            <button class="card-carousel-btn prev" onclick="changeCardSlide(this, -1)">‹</button>
+            <button class="card-carousel-btn next" onclick="changeCardSlide(this, 1)">›</button>
+            <div class="card-carousel-dots">
+              <span class="card-carousel-dot active"></span>
+              <span class="card-carousel-dot"></span>
+              <span class="card-carousel-dot"></span>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Center Peluche Fit Gengar Japon</h3>
+              <p>PELUCHE</p>
+              <p>S/.69</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Center Peluche Fit Gengar Japon')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-Center-Peluche-Fit-Haxorus-Japon-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>              
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Center Peluche Fit Haxorus Japon</h3>
+              <p>PELUCHE</p>
+              <p>S/.69</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Center Peluche Fit Haxorus Japon')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/07/Pokemon-ALL-STAR-Japon-Peluche-Totodile-18cm-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon ALL STAR Japon Peluche Totodile 18cm</h3>
+              <p>PELUCHE</p>
+              <p>S/.69</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon ALL STAR Japon Peluche Totodile 18cm')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/06/Pokemon-Peluche-Blatoise-31cm-Jazwares-Oficial-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Peluche Blatoise 31cm Jazwares Oficial</h3>
+              <p>PELUCHE</p>
+              <p>S/.69</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Muñeco Antiestrés - Modelo Clásico')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <section id="bolsas">
+      <h2>GAMING</h2>
+      <div class="grid">
+        <!-- Card 1  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/06/SanDisk-Nintendo-Switch-512GB-Pokemon-Gengar-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>SanDisk Nintendo Switch 512GB Pokemon Gengar</h3>
+              <p>GAMING</p>
+              <p>S/.499</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'SanDisk Nintendo Switch 512GB Pokemon Gengar')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/06/Pokemon-Trainer-Ash-Adventures-Electronic-Ingles-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Trainer Ash Adventures Electronic</h3>
+              <p>GAMING</p>
+              <p>S/.79</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Trainer Ash Adventures Electronic Ingles')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/06/Pokemon-Starters-Teclado-Mecanico-Razer-BlackWidow-V4-1-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Starters Teclado Mecanico Razer</h3>
+              <p>GAMING</p>
+              <p>S/.459.00</p>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Starters Teclado Mecanico Razer')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4  -->
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item">
+                <img loading="lazy" src="https://raymistore.pe/wp-content/uploads/2026/03/Pokemon-Pikachu-Gengar-Funda-PowerA-Nintendo-Switch-6-600x600.jpg" alt="Muñeco Antiestrés - Modelo 1">
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <!-- Información para imagen 1 -->
+            <div class="card-info-item active">
+              <h3>Pokemon Pikachu Gengar Funda PowerA Nintendo</h3>
+              <p>GAMING</p>
+              <p>S/.76.00</p>
+              </div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pokemon Pikachu Gengar Funda PowerA Nintendo Switch')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>     
+      </div>
+    </section>
+  </div>
+  <!-- SECCIÓN DE CLIENTES -->
+  <section class="clientes-section">
+    <h2>Nuestros Clientes</h2>
+    <p class="clientes-subtitle">Empresas que confían en nuestros productos publicitarios</p>
+    
+    <div class="logos-carousel-container">
+      <div class="logos-track">
+        <!-- Primer set de logos -->
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj273ONybuZs9qM4nDggw3kDld4ffETPU8w3PgbmKOvM8zAUFVOt96RqyBmaAcmyHQrKUu-0KZCWVUgjS5h39ZZRTeG9DYtaR35u5z_mpx24adrZR-XI8MW_uNOIcWb3wDKUkY-YjGIxcWI1eMqBVq-CZpiH233iNPnzqMY1XBAuZOqhI_Ua_2qCWUPrXpR/s1792/2.png" alt="Cliente Google">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5hRg5OZDCQRdHfUXdrC35ah-nWh-nyyYDHpD9eePwDeZpMPet2be7LoamC0a2DVSEbWiK7EyA2IOfus37DA8q9hbxHajUWydZFuwVfRzpGsp43mzVbU5CdGvZAwU9SSSxU2suPu3FaJAnU312Ep8UoLmZ3tg2hzS7rqv_waJV-DH0q4FZj8Oh1ypwskgp/s1792/1.png" alt="Cliente Microsoft">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjaOXUxvuSffSNyewqysW273Gq87GtxkW6R1O0Dfy-xvnwJhyphenhyphenzuf6X5h4srJobIYNhTVQPSZkWFeFx7AxRKkI03p3RdMHLuDxfHC3B2_0nnv8UE8ULQ_zczlq477exUzua3qkP5WbnteecJEDe8C7GG_tzy_6lVbm6uXPKWX252UOGlRH8bZdiVg8jgdHP/s1792/18.png" alt="Cliente Amazon">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6PEakkUyKiOGoebA3wTaD1C-fQuOWOjosPjLUriQjfpccSS-x7lZ6NPR_l1lxEDgwZJUwOd0WNwM2eWRyAkIDjH1jDQUNqygyT_hhmf_OU91vOVcPuK07oRUTfhDwR8ICsi6aQiNqUWDG0_-CMHsdu7dy0IxEM2nCi50TI8SnRKDNwWZ4XCroV3Ur4I7c/s1792/16.png" alt="Cliente Meta">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJo0w6XwxiUkybCYy8QUO-edUmKyxQLSaPvwtyejHwFmkwh5Ui3tMVeE3oP2ZzkQwmNRy5UN2EAQRNoYi9fuX-3MFvbd50xAh4EdjJIdTSIaDB4oDZRK3jHri4nVxaU6qpI7h-stqJM3ecFWx9otKLL8KukSkciWfnN3dIKxSncofG_2Fmw2WlJxKXUiSS/s1792/12.png" alt="Cliente Netflix">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEbIHOpKHQsZWAMLzPP__jfUENEQVgNczCNAbnrNzJLgkEcy5sd2NpooAqbLycTI2fmyvEiiup6n1cofbv2gkamqI2wDXiDzPWIKERzqf5aH2FXEYzoqtky67rCKi0Yx-JJGZjKFTxG1FmE-4QFSUGvHFIU-T1oKFs7fVqQ9cXrYbKbUp9F_elOh0HcOcb/s1792/11.png" alt="Cliente Apple">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgexlxAj02OzGI2WBSJU8W4KzoSSNlF6ctzsnJDj5AqQCgeDL6GHdKmKbiH2cvUE9Q2Ix3jxUK4U0Dyq4BO9wI7yQMH-_JCElGKphhT4TdzSq-tbkMQhgHVy4FFDTohFlzsMhm8PRwlgMb9x9pF8AkVMdvZjpvWvBWhPflx0p5_DzoELz4ATCxkG27f8yA/s1792/10.png" alt="Cliente Coca Cola">
+        </div>
+        
+        <!-- Segundo set (duplicado para loop infinito) -->
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJlXRsjAGgv1Zb2kCyuisKSPdPkDetIGnMg2geXHUHCRWudIpOcP7z-U2uAgIZCXrfFXMKNdf_vo3toa0wuU8N32pzN6LsFl37no2WoPZxQaZpHmAXaNtH1oy5xzdTThzQ6QTMASlI2dJWR5OUVZcQS_sS-rtMQA2GCYphDdWQHqQbwgh4XhWx2staKXo_/s1792/9.png" alt="Cliente Google">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghPHCb5pyl-oRa_-rOVpEFqSyLDWUFBbrJOW6vSEL-8b8f0zHJKeyiUnX-Ur1pL8J6fEargtVDi68COUEsc5ZUNAMmDJgK_doHuO-v0QHiHlMRK_R2ruCnaKuCzLjVvyxp4K_mWW7iOOv2ytfRTZfhtM-MYke9eXfamlzV3h9_GuzHxvYn4rCO6ppvgsHZ/s1792/4.png" alt="Cliente Microsoft">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrEwniaTAOPInSGekTeqxd1eULlwldltZ7-o3TpaH4USz_uSOodD7UgneHpRk-UrvyZhJBKrbe_tv15jhW4bFmafcKAUC_WUa_PcMgGR_IE3w-10gAPgCq3s8Tdy1bESPveeI8N9Guivl5zmpPnvzZrNegFKxDVZrxpusjWHTYRo4Pwu4rxnsTCw-Y31d5/s1792/3.png" alt="Cliente Amazon">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrMEYMfMG8SVaGy0cuh8k0mfF-g09Xa6FSoNf6punxpMmXFdoDhp9uWzrviD0_meZXpl77tuGsLX2jFQsdh5Sr6DUyIzHcbUDIueq27tGQeGtTmUBI_kYKmVc6CeBQcFhvtPCtBY1cSLDaWGEctfJBZngB2_WIrBGhRYGQq5LpCLi7sU_hvQJGUJGS5vcq/s1792/17.png" alt="Cliente Meta">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFMBNNVE3GvrE0wt3hlVw1h3WDElRSUPExCQZdMtFwFBd-RMTqZJAe4fS9UZTmcK2N1EMqu3sUkPBnNjzk6bmsmi2rm9v7rSlwoZIQozFDHKoFgS4uGyxAgxSWZjXadcWobYEFGeYzde2drIXnouKvYzemzls-xy0xGr7XTuF20IP5lpBh0r3pDydqisJE/s1792/19.png" alt="Cliente Netflix">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicFUGtb-HURlM3NJ8n23KKQDEjL-DiI1QOYnQVP8GxetEUowc0WdxmtLNrjV60T-vWy3ZiGrXLIwZVmeYb7Qx8Ce82-FW0K2IfE6yRg7EJa0px17EpLBtAVhGxm_RcKuLoFUwMxxo_6ewWib8OYrBxC7Oarqf89sqtfvMmYFDyLdV8AMKoF45Ti5vzQGYJ/s1792/14.png" alt="Cliente Apple">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSbh5S8KwiZu_44g_8wpKGB7vD-2ZIBKvCz8Cmed_9N653lK_A0LDwiFEv995hW2_51Gsw-oPHByi3fv7lkRmKEmQtLfvXWLM2JucVTbSlM5ZqlKFoi8j-Rtzv5IZ2cBnUjZ4jvEbe5wnieucM66E57CXw7OlWFik69q7ABAaYHLlJ4jvzN3x1ZYncU0A7/s1792/7.png" alt="Cliente Coca Cola">
+        </div>
+
+        <!-- Tercer set (para asegurar transición perfecta) -->
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjleBRMQ2wScZ57LWaeBRX6Hv5CJVoOiVDOW79ztm54hyphenhyphen37MwL9opm0uKsDzW4rAKpN0f7b1-sWqCdgL-4EZ-JS2NpKTcWDQDLwWipS1jxQxoQCSmwDCbZ8UamK8Dma3aiGH-DMsokF8YSRm69KcWDSwAo3RQPESMzgLVmXgBwILUgVAVcyFg0XrHrXM6sa/s1792/6.png" alt="Cliente Google">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfOEeOwjvHL3JPrUjRdVMyKnPySftZSecwGS-ylr-GOtpTF8T9bp-nMosFC80UESjI14Wiu5BUTEahM-3DzC02N7NKNUhd6IfDVoTuSDYOo1Y1n6U9AiTIYUn5LNrS1SK5ExmwccYpNBMKsjx-wiVT8VeY0BhkR3Visqi1PFWMG_9i2_BQw0vUAYsDVkcD/s1792/5.png" alt="Cliente Microsoft">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrEwniaTAOPInSGekTeqxd1eULlwldltZ7-o3TpaH4USz_uSOodD7UgneHpRk-UrvyZhJBKrbe_tv15jhW4bFmafcKAUC_WUa_PcMgGR_IE3w-10gAPgCq3s8Tdy1bESPveeI8N9Guivl5zmpPnvzZrNegFKxDVZrxpusjWHTYRo4Pwu4rxnsTCw-Y31d5/s1792/3.png" alt="Cliente Amazon">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrMEYMfMG8SVaGy0cuh8k0mfF-g09Xa6FSoNf6punxpMmXFdoDhp9uWzrviD0_meZXpl77tuGsLX2jFQsdh5Sr6DUyIzHcbUDIueq27tGQeGtTmUBI_kYKmVc6CeBQcFhvtPCtBY1cSLDaWGEctfJBZngB2_WIrBGhRYGQq5LpCLi7sU_hvQJGUJGS5vcq/s1792/17.png" alt="Cliente Meta">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFMBNNVE3GvrE0wt3hlVw1h3WDElRSUPExCQZdMtFwFBd-RMTqZJAe4fS9UZTmcK2N1EMqu3sUkPBnNjzk6bmsmi2rm9v7rSlwoZIQozFDHKoFgS4uGyxAgxSWZjXadcWobYEFGeYzde2drIXnouKvYzemzls-xy0xGr7XTuF20IP5lpBh0r3pDydqisJE/s1792/19.png" alt="Cliente Netflix">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicFUGtb-HURlM3NJ8n23KKQDEjL-DiI1QOYnQVP8GxetEUowc0WdxmtLNrjV60T-vWy3ZiGrXLIwZVmeYb7Qx8Ce82-FW0K2IfE6yRg7EJa0px17EpLBtAVhGxm_RcKuLoFUwMxxo_6ewWib8OYrBxC7Oarqf89sqtfvMmYFDyLdV8AMKoF45Ti5vzQGYJ/s1792/14.png" alt="Cliente Apple">
+        </div>
+        <div class="logo-item">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSbh5S8KwiZu_44g_8wpKGB7vD-2ZIBKvCz8Cmed_9N653lK_A0LDwiFEv995hW2_51Gsw-oPHByi3fv7lkRmKEmQtLfvXWLM2JucVTbSlM5ZqlKFoi8j-Rtzv5IZ2cBnUjZ4jvEbe5wnieucM66E57CXw7OlWFik69q7ABAaYHLlJ4jvzN3x1ZYncU0A7/s1792/7.png" alt="Cliente Coca Cola">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 CP CARD Y POKEMON - Catálogo de Productos </p>
+    <p>Creado por RodrigoCP - 948518211</p>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
