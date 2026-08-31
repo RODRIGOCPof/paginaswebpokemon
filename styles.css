@@ -750,3 +750,58 @@
     .card:nth-child(4) { animation-delay: 0.4s; }
     .card:nth-child(5) { animation-delay: 0.5s; }
     .card:nth-child(6) { animation-delay: 0.6s; }
+    /* ====== SESIÓN 2: EL PUENTE DIGITAL (integración E-business) ====== */
+    .puente-digital-section {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f2ff 100%);
+      padding: 60px 20px;
+      margin: 60px 0 0 0;
+      text-align: center;
+    }
+    .puente-digital-section h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: #6f330f;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .pd-subtitle {
+      color: #666;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .pd-btn {
+      background: linear-gradient(135deg, #C41F25 0%, #ffd104 100%);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(196, 31, 37, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .pd-btn:hover {
+      transform: translateY(-2px);
+    }
+    .pd-estado {
+      margin: 18px 0;
+      font-style: italic;
+      color: #6f330f;
+      font-weight: 500;
+    }
+    .pd-catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      max-width: 1000px;
+      margin: 20px auto 0;
+      text-align: left;
+    }
+    .pd-producto {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
