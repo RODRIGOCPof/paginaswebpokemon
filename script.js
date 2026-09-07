@@ -219,3 +219,71 @@
       // Abrir en nueva ventana
       window.open(urlWhatsApp, '_blank');
     }
+    
+  // URL de la API de tipo de cambio (ejemplo con API de cambio de soles PEN a USD/EUR)
+const API_URL = "https://open.er-api.com/v6/latest/PEN";
+
+// Función que consulta la API y actualiza los precios en la misma página
+async function actualizarPreciosEnPagina(monedaDestino = 'USD') {
+  const estadoEl = document.getElementById("pd-estado");
+  
+  try {
+    if (estadoEl) estadoEl.textContent = "Obteniendo tipo de cambio en tiempo real...";
+
+    // 1. Petición a la API
+    const respuesta = await fetch(API_URL);
+    const datos = await respuesta.json();
+
+    if (datos.result !== "success") {
+      throw new Error("No se pudo obtener el tipo de cambio.");
+    }
+
+    // 2. Obtener la tasa de cambio de PEN a la moneda deseada
+    const tasa = datos.rates[monedaDestino]; 
+    const simbolo = monedaDestino === 'USD' ? '$' : '€';
+
+    // 3. Recorrer todas las tarjetas del HTML actual
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+      // Buscamos el elemento <p> que contiene el precio
+      // Asumiendo que el texto original es tipo "S/.199" o "S/.29.00"
+      const infoDiv = card.querySelector(".card-info-item");
+      if (!infoDiv) return;
+
+      const parrafos = infoDiv.querySelectorAll("p");
+      // El segundo párrafo en tus cards es el precio (p.ej: <p>S/.199</p>)
+      const elPrecio = parrafos[1]; 
+
+      if (elPrecio) {
+        // Guardar el precio original en Soles si no está guardado aún
+        if (!elPrecio.dataset.precioOriginal) {
+          const precioPEN = parseFloat(elPrecio.textContent.replace(/[^0-9.]/g, ''));
+          elPrecio.dataset.precioOriginal = precioPEN;
+        }
+
+        const precioPEN = parseFloat(elPrecio.dataset.precioOriginal);
+
+        if (!isNaN(precioPEN)) {
+          // Convertir el precio
+          const precioConvertido = (precioPEN * tasa).toFixed(2);
+          // Actualizar el texto del precio directamente en la tarjeta
+          elPrecio.innerHTML = `<strong>${simbolo}${precioConvertido} ${monedaDestino}</strong> <small style="color: #777;">(S/. ${precioPEN})</small>`;
+        }
+      }
+    });
+
+    if (estadoEl) {
+      estadoEl.textContent = `Precios actualizados a ${monedaDestino} (Tasa: 1 PEN = ${tasa.toFixed(4)} ${monedaDestino})`;
+    }
+
+  } catch (error) {
+    console.error("Error al actualizar precios:", error);
+    if (estadoEl) estadoEl.textContent = "Error al obtener tipo de cambio.";
+  }
+}
+
+// 4. EJECUTAR AUTOMÁTICAMENTE AL CARGAR LA PÁGINA (Sin necesidad de presionar botones)
+document.addEventListener("DOMContentLoaded", () => {
+  actualizarPreciosEnPagina('USD');
+});
